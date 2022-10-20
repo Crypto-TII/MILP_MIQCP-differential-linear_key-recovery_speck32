@@ -23,11 +23,6 @@ dummy_xor >= C[n-1] /\
 A[n-1]+B[n-1]+C[n-1] >= 2*dummy_xor /\
 A[n-1]+B[n-1]+C[n-1] <= 3;
 
-predicate thomas_constraints(array [int] of var 0..1 : A, array [int] of var 0..1 : B, array [int] of var 0..1 : C, int: nn) =
-let {
-    int: n = length(A);
-} in 
-forall(j in nn..n-1) (sum(array1d([(A[j-i]+B[j-i]+C[j-i])mod 2|i in 1..nn])) < nn);
 
 predicate modular_addition(var 0..1:a,var 0..1:b,var 0..1:c,var 0..1:a1,var 0..1:b1,var 0..1:c1, var 0..1:d) =
 b-1*c + d >= 0 /\
@@ -44,21 +39,6 @@ c-a1-b1-c1 + d >= -2 /\
 -b-a1 +b1-c1 + d >= -2 /\
 -b-a1-b1 +c1 + d >= -2;
 
-
-predicate modular_addition_juan(var 0..1:a,var 0..1:b,var 0..1:c,var 0..1:a1,var 0..1:b1,var 0..1:c1, var 0..1:d) =
-1*a+0*b+-1*c+0*a1+0*b1+0*c1+1*d>=-0/\
-0*a+-1*b+1*c+0*a1+0*b1+0*c1+1*d>=-0/\
--1*a+1*b+0*c+0*a1+0*b1+0*c1+1*d>=-0/\
--1*a+-1*b+-1*c+0*a1+0*b1+0*c1+-1*d>=-3/\
-1*a+1*b+1*c+0*a1+0*b1+0*c1+-1*d>=-0/\
-1*a+1*b+1*c+-3*a1+-3*b1+-3*c1+2*d>=-6/\
--1*a+-1*b+-1*c+3*a1+-3*b1+-3*c1+2*d>=-6/\
--1*a+-1*b+-1*c+-3*a1+3*b1+-3*c1+2*d>=-6/\
--1*a+-1*b+-1*c+-3*a1+-3*b1+3*c1+2*d>=-6/\
-1*a+1*b+1*c+3*a1+3*b1+-3*c1+2*d>=-0/\
-1*a+1*b+1*c+3*a1+-3*b1+3*c1+2*d>=-0/\
-1*a+1*b+1*c+-3*a1+3*b1+3*c1+2*d>=-0/\
-0*a+0*b+-1*c+1*a1+1*b1+1*c1+1*d>=-0;
 
 % Left rotation of X by val positions
 function array[int] of var 0..1: LRot(array[int] of var 0..1: X, int: val)=
