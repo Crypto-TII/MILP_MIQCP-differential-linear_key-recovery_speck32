@@ -1,4 +1,3 @@
-%Example for 1 round
 float:lower=-1;
 float:upper=1;
 
@@ -22,7 +21,6 @@ let {
 reverse(array1d(0..n-1,[continuous_xor_bit(continuous_xor_bit(aa[n-i-1], bb[n-i-1]), cc[n-i-1]) |i in 0..n-1]));
 
 
-%constraint continuos_modadd(a,b)=c;
 function array [int] of var lower..upper: cast(array [int] of var 0..1:int_var) = 
 let {
     int: n = length(int_var);
