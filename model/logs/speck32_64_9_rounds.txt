@@ -1,3 +1,6 @@
+This log correspond to differential-linear distinguisher 3
+
+
 % Generated FlatZinc statistics:
 %%%mzn-stat: paths=0
 %%%mzn-stat: flatIntVars=1065

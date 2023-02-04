@@ -1,3 +1,5 @@
+This log correspond is an intermediate result to obtain differential-linear distinguisher 4. Specifically this log correspond to the search for
+a 10-round differential-linear distinguisher constraining the number of active bits of the input of the bottom part to 1
 % Generated FlatZinc statistics:
 %%%mzn-stat: paths=0
 %%%mzn-stat: flatIntVars=1113
