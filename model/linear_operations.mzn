@@ -1,3 +1,5 @@
+% The following predicates corresponds to Appendix C.2
+
 predicate linear_modular_addition_word(
  array [int] of var 0..1 : A, 
  array [int] of var 0..1 : B, 
