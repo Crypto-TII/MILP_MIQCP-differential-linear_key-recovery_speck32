@@ -1,3 +1,5 @@
+% The following predicates and functions corresponds to the Appendix C.1
+
 predicate xor_word(array [int] of var 0..1 : A, array [int] of var 0..1 : B, array [int] of var 0..1 : C, array [int] of var 0..1 : dummy_xor) =
 let {
     int: n = length(A);
