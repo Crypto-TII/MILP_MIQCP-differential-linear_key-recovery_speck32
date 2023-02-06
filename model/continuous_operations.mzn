@@ -1,9 +1,10 @@
 float:lower=-1;
 float:upper=1;
 
-% These functions corresponds to equation 5
+% This function corresponds to equation 5
 function var lower..upper: continuous_xor_bit(var lower..upper: x, var lower..upper: y) = -1*x*y;
 
+% This function corresponds to equation 5
 function array [int] of var lower..upper: continuous_xor(array [int] of var float: aa,array [int] of var float: bb) = 
 let {
     int: n = length(aa);
