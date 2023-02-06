@@ -1,3 +1,5 @@
+This README helps to reproduce the verification of the correlations for differential-linear distinguisher 3, 4, 5, and 6
+
 Dependencies
 ------------
 
@@ -22,4 +24,4 @@ Usage Example
 
 From the directory `build/` run the following
 
-    ./speck_32_64_dl < ../distinguishers/3.txt
+    ./speck_32_64_dl < ../distinguishers/diff_lin_3.txt
